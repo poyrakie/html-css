@@ -376,3 +376,163 @@ header {
         }
     }
 }
+.contact-showcase {
+    background-color: #F0EFE9;
+    padding: 114px 0px;
+    .container{
+        display: grid;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        text-align: center;
+
+        a {
+            color: #191919;
+            margin: 0px 20px;
+            text-decoration: none;
+            }
+        #home {
+            font-weight: 300;
+        }
+        #contact {
+            font-weight: 500;
+        }
+        h1 {
+            font-family: 'DM Sans', 'Sans-seriff';
+            font-size: 56px;
+            font-weight: 700;
+        }
+    }
+}
+.contact-form {
+
+    .info {
+        display: block;
+        margin-top: 120px;
+        @media (min-width: 992px){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            }
+
+        .columns {
+            border: 1px solid #afafaf;
+            @media (min-width: 992px){
+                width: 370px;
+                height: 205px;
+                }
+            display: grid;
+            grid-template-columns: auto auto;
+            @media (min-width: 1400px){
+                width: 420px;
+                }
+            i {
+                font-size: 20px;
+                text-align: center;
+                width: 60px;
+                height: 60px;
+                padding: 20px 15px 15px;
+                align-self: start;
+                color: white;
+                background-color: #191919;
+                border-radius: 50px;
+                margin-left:60px;
+                margin-top: 50px;
+                margin-right: 14px;
+            }
+            h3 {
+                font-family: 'DM Sans' 'Sans-seriff';
+                font-size: 22px;
+                font-weight: 700;
+                margin-top: 60px;
+                margin-bottom: 20px;
+            }
+
+            a{
+                display: block;
+                color: #191919;
+                text-decoration: none;
+                font-family: 'inter' 'Sans-seriff';
+                font-weight: 300px;
+
+                font-size: 14px;
+
+                @media (min-width: 1400px) {
+                    font-size: 18px;
+                    margin-right: 100px;
+                }
+
+                &:hover {
+                    background-color: #F9D783;
+                    text-decoration: underline;
+                }
+                p {
+                    margin: 0px;
+                }
+            }
+
+        }
+    }
+
+    .form-section {
+        margin-top: 80px;
+        background-color: #F0EFE9;
+        padding-bottom: 100px;
+
+        
+        h2 {
+
+            font-family: 'DM Sans' 'Sans-seriff';
+            font-size: 45px;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        form {
+
+            margin-top: 30px;
+            text-align: center;
+            #your-message {
+                padding-bottom: 160px;
+            }
+            input {
+                @media (min-width: 576px){
+                    width: 460px;
+                }
+                @media (min-width: 768px){
+                    width: 660px;
+                }
+                @media (min-width: 992px){
+                    width: 660px;
+                }
+                @media (min-width: 1200px){
+                    width: 830px;
+                }
+                @media (min-width: 1400px){
+                    width: 1020px;
+                }
+                padding: 20px;
+                border-radius: 40px;
+                border: hidden;
+
+            }
+            label {
+                margin: 20px 0px 10px;
+            }
+        }
+        a{
+
+            display: block;
+            text-align: center;
+            margin: 40px 20px;
+            @media (min-width: 992px){
+                margin: 40px 140px;
+            }
+        }
+    }
+}
+
+.contact-map {
+
+}
