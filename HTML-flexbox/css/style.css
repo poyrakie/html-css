@@ -4,7 +4,7 @@ html, body {
   color: #191919;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
 }
 html h2, body h2 {
   font-family: "DM Sans", "sans-serif";
@@ -96,6 +96,22 @@ html .squiggly-lines, body .squiggly-lines {
   color: #191919;
 }
 
+.round-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.round-buttons a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #191919;
+  opacity: 0.3;
+}
+.round-buttons a.active, .round-buttons a:hover {
+  opacity: 1;
+}
+
 .center-content {
   display: flex;
   justify-content: center;
@@ -164,7 +180,6 @@ header .container .menu .top-menu .contact-information .content-box {
   border-right: 1px solid #DAD9D3;
   font-family: "Inter", sans-serif;
   font-size: 15px;
-  font-weight: 300;
 }
 header .container .menu .top-menu .contact-information .content-box i {
   margin-right: 5px;
@@ -572,26 +587,21 @@ header .container .menu .main-menu .btn-login {
 }
 .services-section .container .services-box {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  justify-content: space-around;
   gap: 30px;
-  margin: 50px 0px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .services-section .container .services-box {
     display: grid;
+    justify-content: space-evenly;
     grid-template-columns: auto auto;
-    margin-left: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  .services-section .container .services-box {
-    margin-left: 160px;
   }
 }
 @media (min-width: 1400px) {
   .services-section .container .services-box {
-    margin-left: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -805,9 +815,11 @@ header .container .menu .main-menu .btn-login {
 }
 .meet-section .container .part-one .btn-transparent {
   align-self: center;
+  margin-top: 15px;
 }
 @media (min-width: 1400px) {
   .meet-section .container .part-one .btn-transparent {
+    margin-top: 0px;
     margin-bottom: 5px;
     align-self: end;
   }
@@ -817,45 +829,25 @@ header .container .menu .main-menu .btn-login {
   flex-direction: column;
   align-items: center;
   padding-bottom: 40px;
+  justify-content: space-around;
+}
+.meet-section .container .part-two img {
+  height: auto;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .meet-section .container .part-two {
     display: grid;
     grid-template-columns: auto auto;
-  }
-}
-@media (min-width: 992px) {
-  .meet-section .container .part-two {
-    margin-left: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  .meet-section .container .part-two {
-    margin-left: 160px;
+    justify-content: space-evenly;
   }
 }
 @media (min-width: 1400px) {
   .meet-section .container .part-two {
-    margin-left: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-}
-.meet-section .container .round-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-.meet-section .container .round-buttons a {
-  font-size: 12px;
-  text-decoration: none;
-  color: #191919;
-  opacity: 0.3;
-}
-.meet-section .container .round-buttons a.active, .meet-section .container .round-buttons a:hover {
-  opacity: 1;
 }
 
 .testimonial-section {
@@ -865,7 +857,12 @@ header .container .menu .main-menu .btn-login {
 .testimonial-section .container {
   text-align: center;
   background-color: #fff;
-  padding: 120px;
+  padding: 120px 0px;
+}
+@media (min-width: 576px) {
+  .testimonial-section .container {
+    padding: 120px;
+  }
 }
 @media (min-width: 1400px) {
   .testimonial-section .container {
@@ -878,33 +875,161 @@ header .container .menu .main-menu .btn-login {
 .testimonial-section .container .reviews {
   text-align: start;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width: 1400px) {
+  .testimonial-section .container .reviews {
+    flex-direction: row;
+  }
 }
 .testimonial-section .container .reviews .content-box {
-  max-width: 325px;
-  max-height: 310px;
+  text-align: center;
   margin-bottom: 100px;
 }
+@media (min-width: 576px) {
+  .testimonial-section .container .reviews .content-box {
+    text-align: start;
+    max-width: 325px;
+    max-height: 310px;
+  }
+}
 .testimonial-section .container .reviews .content-box .review-text {
-  font-weight: 300;
-  line-height: 1.8;
+  line-height: 1;
   margin-bottom: 40px;
+}
+@media (min-width: 576px) {
+  .testimonial-section .container .reviews .content-box .review-text {
+    line-height: 1.8;
+  }
 }
 .testimonial-section .container .reviews .content-box .stars {
   font-size: 14px;
   color: #F94D1C;
   margin-bottom: 28px;
 }
-.testimonial-section .container .reviews .content-box .reviewer {
-  display: flex;
+@media (min-width: 1400px) {
+  .testimonial-section .container .reviews .content-box .reviewer {
+    display: flex;
+  }
+}
+.testimonial-section .container .reviews .content-box .reviewer .orange-p {
+  border-bottom: 1px solid #DAD9D3;
+}
+@media (min-width: 1400px) {
+  .testimonial-section .container .reviews .content-box .reviewer .orange-p {
+    border: none;
+  }
 }
 .testimonial-section .container .reviews .content-box .reviewer img {
   margin-right: 20px;
+  display: none;
+}
+@media (min-width: 576px) {
+  .testimonial-section .container .reviews .content-box .reviewer img {
+    display: inline;
+  }
+}
+
+.article-section {
+  padding: 120px 0px 90px;
+}
+.article-section .container .part-one {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 100px;
+  text-align: center;
+}
+@media (min-width: 1400px) {
+  .article-section .container .part-one {
+    flex-direction: row;
+    text-align: start;
+  }
+}
+.article-section .container .part-one h2 {
+  margin-top: 20px;
+}
+.article-section .container .part-one .btn-transparent {
+  align-self: center;
+  margin-top: 15px;
+}
+@media (min-width: 1400px) {
+  .article-section .container .part-one .btn-transparent {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    align-self: end;
+  }
+}
+.article-section .container .part-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 70px;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .article-section .container .part-two {
+    flex-direction: row;
+    text-align: start;
+  }
+}
+.article-section .container .part-two a {
+  text-decoration: none;
+  color: #191919;
+  position: relative;
+}
+.article-section .container .part-two a h3 {
+  margin-bottom: 28px;
+}
+@media (min-width: 1200px) {
+  .article-section .container .part-two a h3 {
+    max-width: 310px;
+  }
+}
+.article-section .container .part-two a:hover {
+  background-color: #F9D783;
+  text-decoration: underline;
+}
+.article-section .container .part-two a img {
+  height: auto;
+  width: 100%;
+  margin-bottom: 36px;
+}
+.article-section .container .part-two a .business-color {
+  color: #6A6C71;
+}
+.article-section .container .part-two a .absolute-date {
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  left: 16px;
+  background-color: #F9D783;
+  width: 56px;
+  height: 65px;
+}
+.article-section .container .part-two a .absolute-date h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .contact-showcase {
   background-color: #F0EFE9;
   padding: 114px 0px;
+  position: relative;
+  z-index: 0;
+}
+.contact-showcase .squiggly-lines {
+  z-index: -1;
+  bottom: 0;
+  display: none;
+}
+@media (min-width: 992px) {
+  .contact-showcase .squiggly-lines {
+    display: inline;
+  }
 }
 .contact-showcase .container {
   display: grid;
@@ -917,9 +1042,6 @@ header .container .menu .main-menu .btn-login {
   margin: 0px 20px;
   text-decoration: none;
 }
-.contact-showcase .container #home {
-  font-weight: 300;
-}
 .contact-showcase .container #contact {
   font-weight: 500;
 }
@@ -929,6 +1051,9 @@ header .container .menu .main-menu .btn-login {
   font-weight: 700;
 }
 
+.contact-form {
+  padding-bottom: 125px;
+}
 .contact-form .info {
   display: block;
   margin-top: 120px;
@@ -982,7 +1107,6 @@ header .container .menu .main-menu .btn-login {
   color: #191919;
   text-decoration: none;
   font-family: "inter" "Sans-seriff";
-  font-weight: 300px;
   font-size: 14px;
 }
 @media (min-width: 1400px) {
@@ -1059,4 +1183,9 @@ header .container .menu .main-menu .btn-login {
   .contact-form .form-section a {
     margin: 40px 140px;
   }
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 620px;
 }
