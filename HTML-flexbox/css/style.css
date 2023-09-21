@@ -32,7 +32,8 @@ html h4, body h4 {
   font-family: "DM Sans" "Sans-serif";
   font-weight: 700;
 }
-html .squiggly-lines, body .squiggly-lines {
+
+.squiggly-lines {
   position: absolute;
 }
 
@@ -766,6 +767,9 @@ header .container .menu .main-menu .btn-login {
 .projects-section .container .project-part a:hover h3 {
   border-bottom: 1px solid #191919;
 }
+.projects-section .container .project-part a:hover img {
+  opacity: 0.6;
+}
 .projects-section .container .project-part a img {
   height: auto;
   width: 100%;
@@ -1013,6 +1017,59 @@ header .container .menu .main-menu .btn-login {
 .article-section .container .part-two a .absolute-date h3 {
   margin-top: 10px;
   margin-bottom: 0px;
+}
+
+.mail-signup-section {
+  padding: 105px 0px;
+  background-color: #F0EFE9;
+  position: relative;
+  z-index: 0;
+}
+.mail-signup-section .squiggly-lines {
+  right: 0;
+  bottom: 3rem;
+  z-index: -1;
+}
+.mail-signup-section .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .mail-signup-section .container {
+    flex-direction: row;
+  }
+}
+.mail-signup-section .container h2 {
+  text-align: center;
+  margin-top: 23px;
+}
+.mail-signup-section .container .subscribe {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .mail-signup-section .container .subscribe {
+    flex-direction: row;
+  }
+}
+.mail-signup-section .container .subscribe form {
+  margin-top: 30px;
+  text-align: center;
+}
+.mail-signup-section .container .subscribe form input {
+  width: 308px;
+  padding: 15px;
+  border-radius: 40px;
+  border: hidden;
+}
+@media (min-width: 576px) {
+  .mail-signup-section .container .subscribe .btn-yellow {
+    align-self: end;
+  }
 }
 
 .contact-showcase {
