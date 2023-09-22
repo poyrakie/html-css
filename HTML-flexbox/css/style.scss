@@ -550,29 +550,27 @@ header {
             }
             .btn-black {
                 display: block;
+                margin-right: 0px;
+                margin-bottom: 25px;
                 @media (min-width: 576px) {
+                    margin-bottom: 0px;
+                    margin-right: 30px;
                     display: inline;
+
                 }
             }
             .video-button {
-                display: block;
-                margin-top: 20px;
                 color: #191919;
                 text-decoration: none;
                 font-weight: 600;
-                margin-bottom: 25px;
-                @media (min-width: 576px) {
-                    display: inline;
-                }
                 i {
                     text-align: center;
-                    width: 48px;
-                    height: 48px;
+                    width: 55px;
+                    height: 55px;
                     border: 1px solid #191919;
-                    margin-left: 40px;
-                    margin-right: 20px;
-                    padding: 15px;
-                    border-radius: 25px;
+                    padding: 18px;
+                    border-radius: 100%;
+                    margin-right: 30px;
                 }
                 &:hover {
                     text-decoration: underline;
@@ -1062,7 +1060,7 @@ header {
         }
         h2 {
             text-align: center;
-            margin-top: 23px;
+            
         }
         .subscribe{
             display: flex;
@@ -1074,7 +1072,7 @@ header {
                 
             }
             form {
-                margin-top: 30px;
+                
                 text-align: center;
                 input {
                     width: 308px;
@@ -1084,10 +1082,25 @@ header {
                 }
             }
             .btn-yellow {
-                @media (min-width: 576px) {
-                    align-self: end; 
+                @media (max-width: 576px) {
+                    // easteregg hunt, can you find them all?
+                    &:hover {
+                        background: linear-gradient(
+                        90deg,
+                        rgba(255, 0, 0, 1) 0%,
+                        rgba(255, 154, 0, 1) 10%,
+                        rgba(208, 222, 33, 1) 20%,
+                        rgba(79, 220, 74, 1) 30%,
+                        rgba(63, 218, 216, 1) 40%,
+                        rgba(47, 201, 226, 1) 50%,
+                        rgba(28, 127, 238, 1) 60%,
+                        rgba(95, 21, 242, 1) 70%,
+                        rgba(186, 12, 248, 1) 80%,
+                        rgba(251, 7, 217, 1) 90%,
+                        rgba(255, 0, 0, 1) 100%
+                    );
+                    }
                 }
-                
             }
         }
     }
@@ -1130,7 +1143,9 @@ header {
 }
 
 .contact-form {
-    padding-bottom: 125px;
+    @media (min-width: 576px) {
+        padding-bottom: 125px;
+    }
     .info {
         display: block;
         margin-top: 120px;
@@ -1263,5 +1278,108 @@ header {
     iframe {
         width: 100%;
         height: 620px;
+    }
+}
+
+footer {
+    background-color: #0E1021;
+    color: #fff;
+    padding-top: 115px;
+
+
+    .top-footer{
+        padding-bottom: 90px;
+        position: relative;
+        z-index: 0;
+        .squiggly-lines{
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .container {
+            .footer-menu{
+                display: flex;
+                justify-content: space-between;
+                .menu-bars{
+                    color: #fff;
+                    background-color: transparent;
+                    border: none;
+                    @media (min-width: 992px) {
+                        display: none;
+                    }
+                }
+                .link-list {
+                    display: none;
+                    @media (min-width: 992px) {
+                        display: block;
+                    }
+                    a{
+                        margin-top: 25px;
+                        display: block;
+                        text-decoration: none;
+                        color: #fff;
+                        &:hover{
+                            text-decoration: underline;
+                            color: hotpink;
+                        }
+                    }
+                    h3{
+                        margin-bottom: 50px;
+                    }
+                }
+                p{
+                    max-width: 300px;
+                    margin-top: 35px;
+                    display: none;
+                    @media (min-width: 992px) {
+                        display: block;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .footer-border{
+        width: 100%;
+        border: 1px solid #454545;
+    }
+
+    .bot-footer{
+        padding-top: 35px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 14px;
+
+            // this is for you Joakim!
+            color: hotpink;
+            @media (min-width: 576px) {
+                margin: 0;
+                font-size: 16px;
+                // this is for you Joakim!
+                color: #fff;
+            }
+            
+        }
+        .social-media {
+                    
+            a {
+                color: #fff;
+                font-size: 1.3rem;
+                margin-left: 20px;
+
+                &:hover{
+                    color: hotpink;
+                }
+            }
+        }
     }
 }
