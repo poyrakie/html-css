@@ -781,7 +781,6 @@ header .container .menu .main-menu .btn-login {
   text-decoration: none;
   color: #191919;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
 .projects-section .container .project-part a:hover p {
@@ -1140,7 +1139,7 @@ header .container .menu .main-menu .btn-login {
   margin: 0px 20px;
   text-decoration: none;
 }
-.contact-showcase .container #contact {
+.contact-showcase .container a.active {
   font-weight: 500;
 }
 .contact-showcase .container h1 {
@@ -1224,67 +1223,43 @@ header .container .menu .main-menu .btn-login {
 .contact-form .info .columns a p {
   margin: 0px;
 }
-.contact-form .form-section {
+.contact-form .form-part {
   margin-top: 80px;
   background-color: #F0EFE9;
   padding-bottom: 100px;
 }
-.contact-form .form-section h2 {
+.contact-form .form-part h2 {
   font-family: "DM Sans" "Sans-seriff";
   font-size: 45px;
   font-weight: 700;
   text-align: center;
   padding-top: 150px;
 }
-.contact-form .form-section form {
+.contact-form .form-part form {
   margin-top: 30px;
   text-align: center;
 }
-.contact-form .form-section form #your-message {
-  padding-bottom: 160px;
-}
-.contact-form .form-section form input {
+.contact-form .form-part form input {
+  width: 80%;
   padding: 20px;
   border-radius: 40px;
   border: hidden;
 }
-@media (min-width: 576px) {
-  .contact-form .form-section form input {
-    width: 460px;
-  }
-}
-@media (min-width: 768px) {
-  .contact-form .form-section form input {
-    width: 660px;
-  }
-}
-@media (min-width: 992px) {
-  .contact-form .form-section form input {
-    width: 660px;
-  }
-}
-@media (min-width: 1200px) {
-  .contact-form .form-section form input {
-    width: 830px;
-  }
-}
-@media (min-width: 1400px) {
-  .contact-form .form-section form input {
-    width: 1020px;
-  }
-}
-.contact-form .form-section form label {
+.contact-form .form-part form label {
   margin: 20px 0px 10px;
 }
-.contact-form .form-section a {
-  display: block;
-  text-align: center;
-  margin: 40px 20px;
+.contact-form .form-part form textarea {
+  width: 80%;
+  height: 160px;
+  padding: 20px;
+  border-radius: 40px;
+  border: hidden;
+  resize: none;
 }
-@media (min-width: 992px) {
-  .contact-form .form-section a {
-    margin: 40px 140px;
-  }
+.contact-form .form-part button {
+  width: 80%;
+  text-align: center;
+  margin: 40px 0;
 }
 
 .contact-map iframe {
@@ -1307,30 +1282,30 @@ footer .top-footer .squiggly-lines {
   right: 0;
   z-index: -1;
 }
-footer .top-footer .container .footer-menu {
+footer .top-footer .footer-menu {
   display: flex;
   justify-content: space-between;
 }
-footer .top-footer .container .footer-menu .menu-bars {
+footer .top-footer .footer-menu .menu-bars {
   color: #fff;
   background-color: transparent;
   border: none;
 }
 @media (min-width: 992px) {
-  footer .top-footer .container .footer-menu .menu-bars {
+  footer .top-footer .footer-menu .menu-bars {
     display: none;
   }
 }
-footer .top-footer .container .footer-menu .link-list {
+footer .top-footer .footer-menu .link-list {
   display: none;
 }
 @media (min-width: 992px) {
-  footer .top-footer .container .footer-menu .link-list {
+  footer .top-footer .footer-menu .link-list {
     display: flex;
     flex-direction: column;
   }
 }
-footer .top-footer .container .footer-menu .link-list a {
+footer .top-footer .footer-menu .link-list a {
   margin-top: 25px;
   width: -moz-max-content;
   width: max-content;
@@ -1338,20 +1313,20 @@ footer .top-footer .container .footer-menu .link-list a {
   color: #fff;
   padding: 0px;
 }
-footer .top-footer .container .footer-menu .link-list a:hover {
+footer .top-footer .footer-menu .link-list a:hover {
   text-decoration: underline;
   color: hotpink;
 }
-footer .top-footer .container .footer-menu .link-list h3 {
+footer .top-footer .footer-menu .link-list h3 {
   margin-bottom: 50px;
 }
-footer .top-footer .container .footer-menu p {
+footer .top-footer .footer-menu p {
   max-width: 300px;
   margin-top: 35px;
   display: none;
 }
 @media (min-width: 992px) {
-  footer .top-footer .container .footer-menu p {
+  footer .top-footer .footer-menu p {
     display: block;
   }
 }

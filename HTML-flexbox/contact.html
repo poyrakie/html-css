@@ -12,6 +12,7 @@
 
     <!-- header section -->
     <header>
+        <!-- kommentarer finns i index.html Header -->
         <div class="container">
             <a href="index.html"><img src="images/Logo.svg" alt="crito logotype"></a>
             <button class="menu-bars"><i class="menu-bars fa-solid fa-bars-staggered"></i></button>
@@ -54,7 +55,8 @@
             <div class="container">
                 <div>
                     <a href="index.html">Home</a>
-                    <a id="contact" href="contact.html">Contact</a>
+                    <!-- tilldelar active class för fetare font -->
+                    <a class="active" href="contact.html">Contact</a>
                 </div>
                 <h1>
                     Let's Connect
@@ -64,6 +66,7 @@
 
         <!-- call us section -->
         <section class="contact-form">
+            <!-- container-1 anger info class info för att separera två olika containrar -->
             <div class="info container">
                 <div class="columns">
                     <i class="fa-solid fa-location-dot"></i>
@@ -92,21 +95,23 @@
                     </div>
                 </div>
             </div>
-            <div class="form-section container">
-                
+            <!-- container-2 anger class form-part för att separera de två containrarna -->
+            <div class="form-part container">
+                <!-- Provar oss fram med </br> for science! -->
                 <h2>
                     Leave us a message </br>for any information.
                 </h2>
-                <form>
+                <!-- Använder method="post" istället för get för att skydda namn och email -->
+                <form method="post">
                     <!-- La till Label för tillgänglighet för skärmläsare -->
-                    <label>Name</label></br>
-                    <input type="text" placeholder="Name*"></br>
-                    <label>Email</label></br>
-                    <input type="text" placeholder="Email*"></br>
-                    <label>Your Message</label></br>
-                    <input id="your-message" type="text" placeholder="Your Message*">
-                </form>
-                <a class="btn-yellow" href="#">Send Message<i class="fa-regular fa-arrow-up-right"></i></a>
+                    <label for="form-name">Name</label></br>
+                    <input id="form-name" type="text" name="name"placeholder="Name*"></br>
+                    <label for="form-email" for="email">Email</label></br>
+                    <input type="email" id="form-email" name="email" placeholder="Email*"></br>
+                    <label for="">Your Message</label></br>
+                    <textarea id="your-message" type="text" placeholder="Your Message*"></textarea>
+                    <button type="submit" class="btn-yellow" href="#">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
+                </form>      
             </div>
         </section>
 
@@ -115,7 +120,9 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.7793860707923!2d18.062010500000003!3d59.336636999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6799554e87%3A0x6562d2c842903003!2sSveav%C3%A4gen%2031%2C%20111%2034%20Stockholm!5e0!3m2!1ssv!2sse!4v1695208243342!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+    <!-- footer section -->
     <footer>
+        <!-- kommentarer finns i index.html Footer -->
         <section class="top-footer">
             <img class="squiggly-lines" src="images/footer-lines.svg" alt="squiggly lines">
             <div class="container">
@@ -130,28 +137,28 @@
                         <a href="index.html#about-section">About</a>
                         <a href="index.html#features-section">Features</a>
                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Works</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Career</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Career</a>
                     </div>
                     <div class="link-list">
                         <h3>Help</h3>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Customer Support</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Delivery Details</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Terms & Conditions</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Privacy Policy</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Customer Support</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Delivery Details</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Terms & Conditions</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Privacy Policy</a>
                     </div>
                     <div class="link-list">
                         <h3>Resources</h3>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Free eBooks</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Development Tutorial</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>How to - Blog</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Youtube Playlist</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free eBooks</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Development Tutorial</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">How to - Blog</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Playlist</a>
                     </div>
                     <div class="link-list">
                         <h3>Link</h3>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Free eBooks</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Development Tutorial</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>How to - Blog</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>Youtube Playlist</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Free eBooks</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Development Tutorial</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">How to - Blog</a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Youtube Playlist</a>
                     </div>
                 </div>
             </div>

@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap');
 
+// Mediaquerries sköter responsivitet och kommenteras sparsamt
+
+// OKOMMENTERADE ELEMENT OCH KLASSER BESTÅR AV EN JÄVLA MASSA GENERELL STYLING
+
+// Vi har inte nollställt padding och margin, kommer inte göra om all styling, men detta tillvägagångsättet kommer ändras till nästa projekt
+
+// Många av våra diverse globala klasser har vi stylat individuelt genom att nästla det så det bara påverkar t.ex. btn-black i en section 
+// istället för att ange en till klass
+// Vi har lärt oss av detta då det blir svårare att hitta i koden vid felsök och dylikt 
+// kommer därför att tilldela mer individuella klasser vid användning av globala klasser i nästa projekt
+
 html, body {
     color: #191919;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+    // annan font-weight än mallen då mallen visar mindre text med andra värden
     font-weight: 300;
     h2 {
         font-family: 'DM Sans', 'sans-serif';
         font-weight: 700;
         font-size: 35px;
-        // text-align: center;
+
             @media (min-width: 760px){
                 font-size: 45px;
             }
-            // @media (min-width: 1200px) {
-            //     text-align: start;
-            // }
     }
-    // annan storlek än mallen då mallen visar mindre text med andra värden
     .orange-p {
         font-weight: 400;
         color: #F94D1C;
+        // annan font-size än mallen då mallen visar mindre text med andra värden
         font-size: 16px;
         margin-bottom: 10px;
     }
@@ -37,10 +46,12 @@ html, body {
     }
 }
 
+// get en global position till bakgrundslinjerna, platsen sköts individuelt längre ner
 .squiggly-lines {
     position: absolute;
 }
 
+// En global styling till gula knappar på sidan
 .btn-yellow {
     background-color: #F9D783;
     border: 1px solid #F9D783;
@@ -63,6 +74,7 @@ html, body {
     }
 }
 
+// En global styling till tranparanta knappar på sidan
 .btn-transparent {
     background-color: transparent;
     border: 1px solid #191919;
@@ -86,6 +98,7 @@ html, body {
     }
 }
 
+// En global styling till svarta knappar på sidan
 .btn-black {
     background-color: #191919;
     border: 1px solid #191919;
@@ -108,10 +121,12 @@ html, body {
     }
 }
 
+// global transition klass för länkar som ej är knapparna ovan
 .transition {
     transition: all 200ms ease-in-out;
 }
 
+// global klass för prickar för att indikera vilken sida du är på vid sidoscrolling
 .round-buttons {
     display: flex;
     align-items: center;
@@ -129,18 +144,21 @@ html, body {
     }
 }
 
+// global klass för att centrera element
 .center-content{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// global klass för att flytta element till höger
 .end-content {
     display: flex;
     justify-content: end;
     align-items: end;
 }
 
+// gäller header på alla sidor
 header {
     background-color: #F0EFE9;
     padding: 16px;
@@ -150,7 +168,6 @@ header {
         align-items: center;
         justify-content: space-between;
         gap: 70px;
-
         .menu-bars {
             border: none;
             font-size: 25px;
@@ -163,13 +180,11 @@ header {
 
         .menu {
             display: none;
+            // Anger plats för flex, liknande fractions
             flex: 1;
-
             @media (min-width: 992px) {
                 display: block;
             }
-
-
             .top-menu {
                 display: flex;
                 justify-content: flex-end;
@@ -243,11 +258,11 @@ header {
                         text-decoration: none;
                         margin-right: 35px;
                         position: relative;
-
                         &.active {
+                            // anger fetare stil till aktiva sidan
                             font-weight: 500;
                         }
-
+                        // kod given av Hans nedan
                         &.active::after,
                         &:hover::after {
                             content: '';
@@ -348,14 +363,12 @@ header {
 .features-section {
 
     .container {
-
         // Ändrar containerns storlek från bootstrap för att få bordern bredare
         @media (min-width: 1400px) {
             max-width: 1520px;
         }
-
         .partners {
-
+            // flex-direction hanterar responsivitet
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -384,6 +397,7 @@ header {
                     display: inline;
                 }
             }
+            // Visar olika element beroende på skärmbredd för att få partners att se bra ut i alla skärmstorlekar
             a {
                 &:hover {
                     opacity: 0.5;
@@ -420,11 +434,16 @@ header {
                 border: 1px #DAD9D3 solid;
                 height: 600px;
             }
+
+            // kaos kod för att hantera responsivitet
+            // koden funkar och gör det den ska men kan skrivas väldigt mycket bättre
+            // skrivs ej om vid detta skedet men kommer se annorlunda ut i framtida projekt
             .part-one {
                 text-align: center;
                 display: flex;
                 flex-direction: column;
-                @media (min-width: 1200px) {
+
+                 @media (min-width: 1200px) {
                     align-items: start;
                     margin-top: 81px;
                     margin-left: 100px;
@@ -433,7 +452,6 @@ header {
                 @media (min-width: 1400px) {
                     margin-left: 100px;
                 }
-
                 p {
 
                     @media (max-width: 992px){
@@ -460,7 +478,6 @@ header {
                     }
                 }            
             }
-
             .part-two {
                 display: none;
                 @media (min-width: 1200px) {
@@ -471,10 +488,7 @@ header {
                 @media (min-width: 1400px) {
                     margin-right: 100px;
                 }
-                .icons-left {
-
-                }
-
+                // manipulerar margin exclusivt i högra columnen
                 .icons-right{
                     margin-left: 115px;
                     margin-right: 75px;
@@ -502,6 +516,7 @@ header {
 
 .about-section {
     .container {
+        // display sköter responsivitet
         display: flex;
         justify-content: center;
         margin-top: 120px;
@@ -513,6 +528,7 @@ header {
         }
 
         .samantha {
+            // använda position för att lägga element över varandra
             display: none;
             position: relative;
             @media (min-width: 1200px) {
@@ -585,7 +601,6 @@ header {
                     margin-bottom: 0px;
                     margin-right: 30px;
                     display: inline;
-
                 }
             }
             .video-button {
@@ -593,7 +608,7 @@ header {
                 text-decoration: none;
                 font-weight: 600;
                 i {
-                    // transition: all 200ms ease-in-out;
+
                     text-align: center;
                     width: 55px;
                     height: 55px;
@@ -633,7 +648,7 @@ header {
             margin-bottom: 50px;
         }
         .services-box {
-            
+                // display sköter hanteringen av boxarna (responsivt)
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -654,6 +669,7 @@ header {
             
 
             a{
+                // a sköter styling för innehållet i boxarna
                 text-decoration: none;
                 color:#191919;
                 background-color: #fff;
@@ -662,6 +678,7 @@ header {
                 padding: 45px 30px;
 
                 .border-bit {
+                    // en fuling för att få dit ett streck
                     width: 40px;
                     height: 1px;
                     background-color: #191919;
@@ -697,8 +714,10 @@ header {
 }
 
 .choose-us-section {
-
-
+    // koden nedan innan gjordes innan vi gick igenom position.
+    // Denna lösning bygger på att manipulera positionen på linear gradient, vilket visar en bakgrundsfärg som går från vitt till den önskade
+    // All kred till Robin, vi satt och pillade med detta i många timmar, men han var big-brainen som faktiskt fick det att funka!
+    // bakgrunden och bilden försvinner i mobilläge
     @media (min-width: 1200px) {
         background-color: white; 
         background-image: linear-gradient(to right, #F0EFE9 60%, rgba(0,0,0,0) 20%);
@@ -710,9 +729,8 @@ header {
         background-position: 45dvw 100%;
     }
     .container {
-        
+        // display hanterar element positionering för responsivitet
         display: flex;
-
         align-items: center;
         margin-top: 60px;
         @media (min-width: 1200px) {
@@ -720,7 +738,6 @@ header {
             align-items: start;  
         }
         .why-choose-us {
-            
             @media (max-width: 1200px){
                 margin: auto;
             }
@@ -739,7 +756,6 @@ header {
                 }
             }
             .headlines{
-
                 display: flex;
                 margin-top: 45px;
                 i {
@@ -758,8 +774,6 @@ header {
             }
         }
         .choose-us-img {
-            
-
             img {
                 margin-top: 50px;
                 display:none;
@@ -797,6 +811,7 @@ header {
             }
         }
         .project-part {
+            // display hanterar artiklarna och responsiviteten
             display: grid;
             grid-template-columns: 1fr;
             gap: 30px;
@@ -806,10 +821,10 @@ header {
             }
 
             a {
+                // display hanterar innehålet i varje a-länk i rader
                 text-decoration: none;
                 color: #191919;
                 display: grid;
-                grid-template-columns: 1fr;
                 grid-template-rows: auto 1fr auto;
 
                 &:hover {
@@ -866,6 +881,7 @@ header {
     .container{
        
         .part-one{
+            // display sköter positionering av titel-delen
             display: flex;
             justify-content: space-between;
             flex-direction: column;
@@ -889,6 +905,7 @@ header {
             }
         }
         .part-two{
+            // display sköter positionering av coworker delen
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -922,6 +939,8 @@ header {
         @media (min-width: 576px) {
             padding: 120px;
         }
+        
+        // begränsar width på den vita bakgrundsfärgen
         @media (min-width: 1400px){
             max-width: 1520px;
         }
@@ -929,6 +948,7 @@ header {
             margin: 35px 0px 100px;
         }
         .reviews {
+            // display sköter positionering av content-boxarna
             text-align: start;
             display: flex;
             align-items: center;
@@ -939,6 +959,7 @@ header {
                 
             }
             .content-box {
+                // display sköter positionering av innehållet av boxarna
                 text-align: center;
                 margin-bottom: 100px;
 
@@ -986,6 +1007,7 @@ header {
     padding: 120px 0px 90px;
     .container {
         .part-one{
+            // display hanterar positionering av titel och knapp (responsivt)
             display: flex;
             justify-content: space-between;
             flex-direction: column;
@@ -1009,6 +1031,7 @@ header {
             }
         }
         .part-two {
+            // display hanterar positionering av a-länkarna (responsivt)
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1076,6 +1099,7 @@ header {
         z-index: -1;
     }
     .container {
+        // display sköter positionering av input och button responsivt
         display: flex;
         justify-content: space-between;
         flex-direction: column;
@@ -1106,6 +1130,7 @@ header {
                     border: hidden;
                 }
             }
+            // Du får väl lista ut vad som händer ;)
             @keyframes easteregg {
                 0% {
                     background-position: 0% 50%;
@@ -1120,7 +1145,6 @@ header {
             .btn-yellow {
                 
                 @media (max-width: 576px) {
-                    // easteregg hunt, can you find them all?
                     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
                     background-size: 400%;
                     animation: easteregg 3s infinite;
@@ -1172,10 +1196,12 @@ header {
             color: #191919;
             margin: 0px 20px;
             text-decoration: none;
+            // Skapar active klass för sidan vi är på
+            &.active {
+                font-weight: 500;
             }
-        #contact {
-            font-weight: 500;
         }
+
         h1 {
             font-family: 'DM Sans', 'Sans-seriff';
             font-size: 56px;
@@ -1185,20 +1211,24 @@ header {
 }
 
 .contact-form {
+    // Media querie för att inte ha vita fält under form i mobilläge
     @media (min-width: 576px) {
         padding-bottom: 125px;
     }
+
+
     .info {
+        // Display sköter hantering av boxarna(responsivt)
         display: block;
         margin-top: 120px;
         @media (min-width: 992px){
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             }
 
         .columns {
+            // display sköter hantering av innehållet i boxarna(responsivt)
             border: 1px solid #DAD9D3;
             @media (min-width: 992px){
                 width: 370px;
@@ -1257,7 +1287,7 @@ header {
         }
     }
 
-    .form-section {
+    .form-part {
         margin-top: 80px;
         background-color: #F0EFE9;
         padding-bottom: 100px;
@@ -1276,25 +1306,9 @@ header {
 
             margin-top: 30px;
             text-align: center;
-            #your-message {
-                padding-bottom: 160px;
-            }
+
             input {
-                @media (min-width: 576px){
-                    width: 460px;
-                }
-                @media (min-width: 768px){
-                    width: 660px;
-                }
-                @media (min-width: 992px){
-                    width: 660px;
-                }
-                @media (min-width: 1200px){
-                    width: 830px;
-                }
-                @media (min-width: 1400px){
-                    width: 1020px;
-                }
+                width: 80%;
                 padding: 20px;
                 border-radius: 40px;
                 border: hidden;
@@ -1302,15 +1316,20 @@ header {
             label {
                 margin: 20px 0px 10px;
             }
-        }
-        a{
-
-            display: block;
-            text-align: center;
-            margin: 40px 20px;
-            @media (min-width: 992px){
-                margin: 40px 140px;
+            textarea {
+                width: 80%;
+                height: 160px;
+                padding: 20px;
+                border-radius: 40px;
+                border: hidden;
+                resize: none;
             }
+        }
+        button{
+            width: 80%;
+            text-align: center;
+            margin: 40px 0;
+            
         }
     }
 }
@@ -1328,8 +1347,6 @@ footer {
     background-color: #0E1021;
     color: #fff;
     padding-top: 115px;
-
-
     .top-footer{
         padding-bottom: 90px;
         position: relative;
@@ -1339,48 +1356,48 @@ footer {
             right: 0;
             z-index: -1;
         }
-        .container {
-            .footer-menu{
-                display: flex;
-                justify-content: space-between;
-                .menu-bars{
+        .footer-menu{
+            // Display sköter positioneringen av länklistorna (responsivt)
+            display: flex;
+            justify-content: space-between;
+            .menu-bars{
+                color: #fff;
+                background-color: transparent;
+                border: none;
+                @media (min-width: 992px) {
+                    display: none;
+                }
+            }
+            // länklistor försvinner i mobilläge och ersätts av menu-bar
+            .link-list {
+                display: none;
+                @media (min-width: 992px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                a{
+                    margin-top: 25px;
+                    // ordnar width så hover inte reagerar utanför texten
+                    width: max-content;
+                    text-decoration: none;
                     color: #fff;
-                    background-color: transparent;
-                    border: none;
-                    @media (min-width: 992px) {
-                        display: none;
+                    padding: 0px;
+                    &:hover{
+                        text-decoration: underline;
+                        color: hotpink;
                     }
                 }
-                .link-list {
-                    display: none;
-                    @media (min-width: 992px) {
-                        display: flex;
-                        flex-direction: column;
-                    }
-                    a{
-                        margin-top: 25px;
-                        // ordnar width så hover inte reagerar utanför texten
-                        width: max-content;
-                        text-decoration: none;
-                        color: #fff;
-                        padding: 0px;
-                        &:hover{
-                            text-decoration: underline;
-                            color: hotpink;
-                        }
-                    }
-                    h3{
-                        margin-bottom: 50px;
-                    }
+                h3{
+                    margin-bottom: 50px;
                 }
-                p{
-                    max-width: 300px;
-                    margin-top: 35px;
-                    display: none;
-                    @media (min-width: 992px) {
-                        display: block;
-                        
-                    }
+            }
+            p{
+                max-width: 300px;
+                margin-top: 35px;
+                display: none;
+                @media (min-width: 992px) {
+                    display: block;
+                    
                 }
             }
         }
@@ -1389,8 +1406,8 @@ footer {
         width: 100%;
         border: 1px solid #454545;
     }
-
     .bot-footer{
+        // display och flex-direction sköter positionering (responsivt)
         padding-top: 35px;
         padding-bottom: 30px;
         display: flex;
@@ -1410,18 +1427,15 @@ footer {
             @media (min-width: 576px) {
                 margin: 0;
                 font-size: 16px;
-                // this is for you Joakim!
                 color: #fff;
             }
             
         }
         .social-media {
-                    
             a {
                 color: #fff;
                 font-size: 1.3rem;
                 margin-left: 20px;
-
                 &:hover{
                     color: hotpink;
                 }
